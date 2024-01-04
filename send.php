@@ -12,11 +12,11 @@ if(isset($_POST["send"])){
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = "mahmudulalam286@gmail.com";
-    $mail->Password = 'gxzcfrcluvnryqdx';
+    $mail->Username = ""; //here is the mail address from you wnat to send mail
+    $mail->Password = ''; // set your app password here
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
-    $mail->setFrom = 'mahmudulalam286@gmail.com';
+    $mail->setFrom = '';//here is the mail address from you wnat to send mail
     $mail->addAddress($_POST["email"]);
     $mail->isHTML(true);
     $mail->Subject = $_POST['subject'];
